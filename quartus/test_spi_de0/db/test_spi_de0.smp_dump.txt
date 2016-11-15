@@ -1,0 +1,21 @@
+
+State Machine - |test_spi_de0|GEN_PULSO:gen_pul|STATE
+Name STATE.st_flanco_detectado STATE.st_espero0 STATE.st_espero1 
+STATE.st_espero1 0 0 0 
+STATE.st_espero0 0 1 1 
+STATE.st_flanco_detectado 1 0 1 
+
+State Machine - |test_spi_de0|Maquina_de_Control:MC|STATE
+Name STATE.st_CALIBRATE STATE.st_SEND_COMMAND_cuento STATE.st_SEND_COMMAND_waitACK STATE.st_SEND_COMMAND_wren STATE.st_SEND_COMMAND STATE.st_STOP STATE.st_START STATE.st_LOAD_PARAM_cuento STATE.st_LOAD_PARAM_waitACK STATE.st_LOAD_PARAM_wren STATE.st_LOAD_PARAM STATE.st_IDLE 
+STATE.st_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+STATE.st_LOAD_PARAM 0 0 0 0 0 0 0 0 0 0 1 1 
+STATE.st_LOAD_PARAM_wren 0 0 0 0 0 0 0 0 0 1 0 1 
+STATE.st_LOAD_PARAM_waitACK 0 0 0 0 0 0 0 0 1 0 0 1 
+STATE.st_LOAD_PARAM_cuento 0 0 0 0 0 0 0 1 0 0 0 1 
+STATE.st_START 0 0 0 0 0 0 1 0 0 0 0 1 
+STATE.st_STOP 0 0 0 0 0 1 0 0 0 0 0 1 
+STATE.st_SEND_COMMAND 0 0 0 0 1 0 0 0 0 0 0 1 
+STATE.st_SEND_COMMAND_wren 0 0 0 1 0 0 0 0 0 0 0 1 
+STATE.st_SEND_COMMAND_waitACK 0 0 1 0 0 0 0 0 0 0 0 1 
+STATE.st_SEND_COMMAND_cuento 0 1 0 0 0 0 0 0 0 0 0 1 
+STATE.st_CALIBRATE 1 0 0 0 0 0 0 0 0 0 0 1 

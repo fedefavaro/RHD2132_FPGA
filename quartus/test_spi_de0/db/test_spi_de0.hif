@@ -1,0 +1,1449 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+..|..|..|..|ipcores|jtag_wbm_bridge|syn|altera|
+..|..|..|..|ipcores|
+ipcores|avs_wbm_bridge|src|
+ipcores|jtag_wbm_bridge|syn|altera|
+ipcores|wb_register|src|
+src|
+test|
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+test_spi_side
+# storage
+db|test_spi_de0.(1).cnf
+db|test_spi_de0.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+test_spi_side.vhd
+5f276dacbd69dd7fddb237138686965
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(di_1_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_1_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(di_2_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_2_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(f1_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(f2_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+test_spi_side:T_spi
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+interconnect
+# storage
+db|test_spi_de0.(2).cnf
+db|test_spi_de0.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|..|src|interconnect|interconnect.vhd
+9a67d419b9f247652153a47bd02c8ac
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(di_1_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_1_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(di_2_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_2_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(s1_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(s1_di_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(s2_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(s2_di_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(f1_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(f2_do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+test_spi_side:T_spi|interconnect:U0
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+spi_master
+# storage
+db|test_spi_de0.(3).cnf
+db|test_spi_de0.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|..|src|spi_master_slave|spi_master.vhd
+52fe1375673e1159b3b13ac255084de
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+16
+PARAMETER_SIGNED_DEC
+USR
+cpol
+'0'
+PARAMETER_ENUM
+USR
+cpha
+'0'
+PARAMETER_ENUM
+USR
+prefetch
+2
+PARAMETER_SIGNED_DEC
+USR
+spi_2x_clk_div
+2
+PARAMETER_SIGNED_DEC
+USR
+ constraint(di_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(state_dbg_o)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(sh_reg_dbg_o)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+test_spi_side:T_spi|spi_master:SPI_1
+test_spi_side:T_spi|spi_master:SPI_2
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+Maquina_de_Control
+# storage
+db|test_spi_de0.(4).cnf
+db|test_spi_de0.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|..|src|maquina_control|Maquina_de_control.vhd
+a1ff2ab6a2430dee8b1cbabee52dd2a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(reg_func_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_func_out)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_load_param_1)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(selec_load_param_1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_send_com_in)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(reg_envio_out)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+Maquina_de_Control:MC
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+spi_slave
+# storage
+db|test_spi_de0.(6).cnf
+db|test_spi_de0.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+..|..|src|spi_master_slave|spi_slave.vhd
+89a46cb1af1988d964cacc8328ff2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+16
+PARAMETER_SIGNED_DEC
+USR
+cpol
+'0'
+PARAMETER_ENUM
+USR
+cpha
+'0'
+PARAMETER_ENUM
+USR
+prefetch
+2
+PARAMETER_SIGNED_DEC
+USR
+ constraint(di_i)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(do_o)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(state_dbg_o)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(sh_reg_dbg_o)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+test_spi_slaves:T_slaves|spi_slave:SLAVE_1
+test_spi_slaves:T_slaves|spi_slave:SLAVE_2
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+GEN_PULSO
+# storage
+db|test_spi_de0.(7).cnf
+db|test_spi_de0.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+gen_pulso.vhd
+24bdd89092f5b585212ed316f682ad8a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+GEN_PULSO:gen_pul
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+fifo_test_1
+# storage
+db|test_spi_de0.(8).cnf
+db|test_spi_de0.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fifo_test_1.vhd
+a075ff8af704050f36b56c75f5ba1f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+15 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+15 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+scfifo
+# storage
+db|test_spi_de0.(9).cnf
+db|test_spi_de0.(9).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|90|quartus|libraries|megafunctions|scfifo.tdf
+d685722fd5c99d18f832a6328b2774c6
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+lpm_width
+16
+PARAMETER_SIGNED_DEC
+USR
+LPM_NUMWORDS
+32
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHU
+5
+PARAMETER_SIGNED_DEC
+USR
+LPM_SHOWAHEAD
+ON
+PARAMETER_UNKNOWN
+USR
+UNDERFLOW_CHECKING
+ON
+PARAMETER_UNKNOWN
+USR
+OVERFLOW_CHECKING
+ON
+PARAMETER_UNKNOWN
+USR
+ALLOW_RWCYCLE_WHEN_FULL
+OFF
+PARAMETER_UNKNOWN
+DEF
+ADD_RAM_OUTPUT_REGISTER
+ON
+PARAMETER_UNKNOWN
+USR
+ALMOST_FULL_VALUE
+0
+PARAMETER_UNKNOWN
+DEF
+ALMOST_EMPTY_VALUE
+0
+PARAMETER_UNKNOWN
+DEF
+USE_EAB
+ON
+PARAMETER_UNKNOWN
+USR
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone III
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+scfifo_tf71
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+wrreq
+-1
+3
+rdreq
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+..|..|..|..|altera|90|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|..|altera|90|quartus|libraries|megafunctions|a_i2fifo.inc
+ca5bb76c5a51df22b24c8b01cbcc918
+..|..|..|..|altera|90|quartus|libraries|megafunctions|a_fffifo.inc
+ebf62e69b8fb10b5db33a57861298d55
+..|..|..|..|altera|90|quartus|libraries|megafunctions|a_regfifo.inc
+afe6bfc54c15224ce61beaea9e71dc
+..|..|..|..|altera|90|quartus|libraries|megafunctions|a_f2fifo.inc
+9bc132bd4e9e2ef1fb9633f6a742f
+..|..|..|..|altera|90|quartus|libraries|megafunctions|a_dpfifo.inc
+748303753a041187a5d4113b5f62acf
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component
+}
+# macro_sequence
+
+# end
+# entity
+scfifo_tf71
+# storage
+db|test_spi_de0.(10).cnf
+db|test_spi_de0.(10).cnf
+# case_insensitive
+# source_file
+db|scfifo_tf71.tdf
+25f6c329e93ad170e523bae51ed9d539
+7
+# used_port {
+wrreq
+-1
+3
+rdreq
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+a_dpfifo_4m71
+# storage
+db|test_spi_de0.(11).cnf
+db|test_spi_de0.(11).cnf
+# case_insensitive
+# source_file
+db|a_dpfifo_4m71.tdf
+836d173d32d408fd4b33c28713859c2
+7
+# used_port {
+wreq
+-1
+3
+sclr
+-1
+3
+rreq
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo
+}
+# macro_sequence
+
+# end
+# entity
+altsyncram_9pf1
+# storage
+db|test_spi_de0.(12).cnf
+db|test_spi_de0.(12).cnf
+# case_insensitive
+# source_file
+db|altsyncram_9pf1.tdf
+39ee29ef44429dc6d46585186e50af35
+7
+# used_port {
+wren_a
+-1
+3
+q_b9
+-1
+3
+q_b8
+-1
+3
+q_b7
+-1
+3
+q_b6
+-1
+3
+q_b5
+-1
+3
+q_b4
+-1
+3
+q_b3
+-1
+3
+q_b2
+-1
+3
+q_b15
+-1
+3
+q_b14
+-1
+3
+q_b13
+-1
+3
+q_b12
+-1
+3
+q_b11
+-1
+3
+q_b10
+-1
+3
+q_b1
+-1
+3
+q_b0
+-1
+3
+data_a9
+-1
+3
+data_a8
+-1
+3
+data_a7
+-1
+3
+data_a6
+-1
+3
+data_a5
+-1
+3
+data_a4
+-1
+3
+data_a3
+-1
+3
+data_a2
+-1
+3
+data_a15
+-1
+3
+data_a14
+-1
+3
+data_a13
+-1
+3
+data_a12
+-1
+3
+data_a11
+-1
+3
+data_a10
+-1
+3
+data_a1
+-1
+3
+data_a0
+-1
+3
+clocken1
+-1
+3
+clock1
+-1
+3
+clock0
+-1
+3
+address_b4
+-1
+3
+address_b3
+-1
+3
+address_b2
+-1
+3
+address_b1
+-1
+3
+address_b0
+-1
+3
+address_a4
+-1
+3
+address_a3
+-1
+3
+address_a2
+-1
+3
+address_a1
+-1
+3
+address_a0
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|altsyncram_9pf1:FIFOram
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_9r8
+# storage
+db|test_spi_de0.(13).cnf
+db|test_spi_de0.(13).cnf
+# case_insensitive
+# source_file
+db|cmpr_9r8.tdf
+745182acb9a336dbbe29b32b9875f41
+7
+# used_port {
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+aeb
+-1
+3
+dataa4
+-1
+2
+dataa3
+-1
+2
+dataa2
+-1
+2
+dataa1
+-1
+2
+dataa0
+-1
+2
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|cmpr_9r8:almost_full_comparer
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_9r8
+# storage
+db|test_spi_de0.(14).cnf
+db|test_spi_de0.(14).cnf
+# case_insensitive
+# source_file
+db|cmpr_9r8.tdf
+745182acb9a336dbbe29b32b9875f41
+7
+# used_port {
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+datab4
+-1
+1
+datab3
+-1
+1
+datab2
+-1
+1
+datab1
+-1
+2
+datab0
+-1
+2
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|cmpr_9r8:three_comparison
+}
+# macro_sequence
+
+# end
+# entity
+cntr_k8b
+# storage
+db|test_spi_de0.(15).cnf
+db|test_spi_de0.(15).cnf
+# case_insensitive
+# source_file
+db|cntr_k8b.tdf
+eda0edf69ee7bef875679b645328f5
+7
+# used_port {
+sclr
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|cntr_k8b:rd_ptr_msb
+}
+# macro_sequence
+
+# end
+# entity
+cntr_197
+# storage
+db|test_spi_de0.(16).cnf
+db|test_spi_de0.(16).cnf
+# case_insensitive
+# source_file
+db|cntr_197.tdf
+410b549752afd1929ccf24ea034e468
+7
+# used_port {
+updown
+-1
+3
+sclr
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|cntr_197:usedw_counter
+}
+# macro_sequence
+
+# end
+# entity
+cntr_l8b
+# storage
+db|test_spi_de0.(17).cnf
+db|test_spi_de0.(17).cnf
+# case_insensitive
+# source_file
+db|cntr_l8b.tdf
+9c994d3d4882c3d42316d836dfa732e
+7
+# used_port {
+sclr
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+fifo_test_1:fifo_test_1_inst|scfifo:scfifo_component|scfifo_tf71:auto_generated|a_dpfifo_4m71:dpfifo|cntr_l8b:wr_ptr
+}
+# macro_sequence
+
+# end
+# entity
+hex27seg
+# storage
+db|test_spi_de0.(18).cnf
+db|test_spi_de0.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+hex27seg.vhd
+214c4ed972d796e4b5e3d8bf7fe891
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(hex_in)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(seg_out)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+hex27seg:hex0
+hex27seg:hex1
+hex27seg:hex2
+hex27seg:hex3
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+test_spi_de0
+# storage
+db|test_spi_de0.(0).cnf
+db|test_spi_de0.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+test_spi_de0.vhd
+99a29afa9a9ed72fe5fddf449c984fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rebot_elim
+# storage
+db|test_spi_de0.(19).cnf
+db|test_spi_de0.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+rebot_elim.vhd
+246aa6c22345d487d7213d916c58e714
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+rebot_elim:RE
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+test_spi_slaves
+# storage
+db|test_spi_de0.(5).cnf
+db|test_spi_de0.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+test_spi_slaves.vhd
+30654ca699ab6cf2843db2cfc6bc1ba
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+test_spi_slaves:T_slaves
+}
+# lmf
+..|..|..|..|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+
